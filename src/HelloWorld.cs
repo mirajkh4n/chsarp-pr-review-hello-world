@@ -50,6 +50,8 @@ namespace MyApp
             PrintElement(myData, 101);
             PrintElement(myData, 102);
 
+            sortArray();
+
             Logger.Info("Terminating program ...");
         }
         public static void PrintElement(Library.DataStore<int, string> Store, int index)
@@ -66,6 +68,22 @@ namespace MyApp
                 Logger.Warn("idx {0}: no such element in DataStore", index);
                 Console.WriteLine(String.Format("idx {0}: no such element in DataStore", index));
             }
+        }
+        public int[] SortArray() 
+        {
+            var n = NumArray.Length;
+        
+            for (int i = 0; i < n - 1; i++)
+                for (int j = 0; j < n - i - 1; j++)
+                    if (NumArray[j] > NumArray[j + 1])
+                    {
+                        var tempVar = NumArray[j];
+                        NumArray[j] = NumArray[j + 1];
+                        NumArray[j + 1] = tempVar;
+                        Console.WriteLine("print number here:");
+                    }
+        
+            return NumArray;
         }
 
     } // class HelloWorld
