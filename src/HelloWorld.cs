@@ -50,7 +50,7 @@ namespace MyApp
             PrintElement(myData, 101);
             PrintElement(myData, 102);
 
-            sortArray();
+            SortArray();
 
             Logger.Info("Terminating program ...");
         }
