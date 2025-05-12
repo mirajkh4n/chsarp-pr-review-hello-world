@@ -67,6 +67,56 @@ namespace MyApp
                 Console.WriteLine(String.Format("idx {0}: no such element in DataStore", index));
             }
         }
+        //New Code
+            using System;
+
+namespace Sort_method
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            // declaring and initializing the array
+
+            int[] arr = new int[] {16, 29, 6, 17, 35, 19};
+
+            Console.WriteLine("Unsorted Array: ");
+
+            foreach(int value in arr)
+
+            {
+
+                Console.Write(value + " ");
+
+            }
+
+            // Sort array in ascending order.
+
+            Array.Sort(arr);
+
+            Console.WriteLine("\nUnsorted Array: ");
+
+            // print all elements of the array
+
+            foreach(int value in arr)
+
+            {
+
+                Console.Write(value + " ");
+
+            }
+
+        }
+
+    }
+
+}
 
     } // class HelloWorld
 
