@@ -100,7 +100,28 @@ namespace MyApp
 
             }
 
-            
+            void DrawCircle(Graphics g, int x, int y, int radius, Color color, float thickness)
+{
+    Pen pen = new Pen(color, thickness);
+    g.DrawEllipse(pen, x - radius, y - radius, radius * 2, radius * 2);
+    pen.Dispose();
+}
+
+void FillCircle(Graphics g, int x, int y, int radius, Color fillColor)
+{
+    Brush brush = new SolidBrush(fillColor);
+    g.FillEllipse(brush, x - radius, y - radius, radius * 2, radius * 2);
+    brush.Dispose();
+}
+
+void DrawCircleWithLabel(Graphics g, int x, int y, int radius, string label, Font font, Color textColor)
+{
+    DrawCircle(g, x, y, radius, Color.Black, 2);
+    Brush brush = new SolidBrush(textColor);
+    SizeF textSize = g.MeasureString(label, font);
+    g.DrawString(label, font, brush, x - textSize.Width / 2, y - textSize.Height / 2);
+    brush.Dispose();
+}
         }
 
     } // class HelloWorld
