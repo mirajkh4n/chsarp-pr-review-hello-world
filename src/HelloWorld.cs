@@ -114,14 +114,7 @@ void FillCircle(Graphics g, int x, int y, int radius, Color fillColor)
     brush.Dispose();
 }
 
-void DrawCircleWithLabel(Graphics g, int x, int y, int radius, string label, Font font, Color textColor)
-{
-    DrawCircle(g, x, y, radius, Color.Black, 2);
-    Brush brush = new SolidBrush(textColor);
-    SizeF textSize = g.MeasureString(label, font);
-    g.DrawString(label, font, brush, x - textSize.Width / 2, y - textSize.Height / 2);
-    brush.Dispose();
-}
+
         }
 
     } // class HelloWorld
